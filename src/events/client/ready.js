@@ -22,7 +22,7 @@ client.on('ready', async () => {
         {name: `;help | ${client.users.cache.size} users`, type: "LISTENING"},
     ]
     let activity = 0
-    client.user.setPresence({status: "dnd", activity: activites[0]})
+    client.user.setPresence({status: "online", activity: activites[0]})
     setInterval(() => {
         if(activity === activity.length) return activity = 0;
         activity++

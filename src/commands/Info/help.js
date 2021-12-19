@@ -20,7 +20,7 @@ module.exports = {
         .addField(`moderation`,"`ban` `botclear` `emojiadd` `hackban` `jail` `kick` `lock` `purge` `purgeuser` `rename` `role` `rolecreate` `roleremove` `unban` `unjail` `unlock` `unmute` ")
         .addField(`utility`,"`afk` `anime` `avatar` `banner` `embed` `emojiadd` `enlarge` `guildbanner` `guildicon` `imdb` `membercount` `members` `roleinfo` `serverinfo` `status` `twitter` `urban` `userinfo` `weather` ")
         .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
-        message.channel.send({
+        message.reply({
             embeds: [help]
         })
 

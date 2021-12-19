@@ -1,9 +1,9 @@
 {
-    "add": "<:add:873640751714668604>",
-    "approve": "<:approve:873641087619719258>",
-    "warn": "<:warn:873633376114995280> ",
-    "deny": "<:deny:873641341605789767>",
-    "remove": "<:remove:873641542156419072>",
+    "add": "<:eternalAdd:921913037252878416>",
+    "approve": "<:eternalSuccess:921857405447454761>",
+    "warn": "<:eternalWarn:873633376114995280> ",
+    "deny": "<:eternalError:921857438502756434>",
+    "remove": "<:eternalRemove:921913757414879254>",
     "lastfm": "<:lastfm:873641698759155712>",
     "verifiedBotDev": "<:verifiedbotdeveloper:873641959238017055>",
     "bugHunterPlus": "<:goldbughunter:873642139840553051>",
@@ -17,4 +17,4 @@
     "discordPartner": "<:Partner:875861301098868778>",
     "earlySupporter": "<:earlysupporter:875861377732980757>",
     "verifiedServer": "<:Verified:868562311172997150>"
-  }
+}
