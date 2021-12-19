@@ -11,7 +11,7 @@ module.exports = {
         
         const help = new Discord.MessageEmbed()
         .setColor("#2f3136")
-        .setTitle(`${client.user.username}`)
+        .setTitle(`help`)
         .setThumbnail(`${client.user.avatarURL({ dynamic: true })}`)
         .setDescription("for more support, join the [support server](https://discord.gg/wKR3G6qrw5)")
         .addField(`admin`, "`;help admin`")
@@ -33,6 +33,7 @@ module.exports = {
             embeds: [help2]
         })
         // message.reply({ embeds: [help] })
+        // ${client.user.username} 
             
     }
 }

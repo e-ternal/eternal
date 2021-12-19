@@ -20,9 +20,12 @@ client.on('messageCreate', async (message) => {
     if (message.author.bot || !message.guild) return;
 
     const mentionRegex = RegExp(`^<@!?${client.user.id}>$`);
+    const myprefix = new MessageEmbed()
+      .setDescription(`**My prefix in this guild is** \`${prefix}\`.`)
+      .setColor(`#2f3136`)
     if (message.content.match(mentionRegex)) {
         message.reply({
-            content: `My prefix in this guild is \`${prefix}\`.`
+            embeds: [myprefix]
         })
         // const embed1 = new MessageEmbed()
         // message.reply({ embeds: [embed] })
