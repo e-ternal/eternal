@@ -20,18 +20,18 @@ module.exports = {
       .setTimestamp()
       .addFields(
         {
-          name: "**Users**",
+          name: "**users**",
           value: `${message.guild.memberCount}`,
           inline: true
         },
         {
-          name: "**Humans**",
+          name: "**humans**",
           value: `${message.guild.memberCount - botCount}`,
           inline: true
         },
 
         {
-          name: "**Bots**",
+          name: "**bots**",
           value: `${botCount}`,
           inline: true
         },
