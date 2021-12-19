@@ -27,7 +27,7 @@ module.exports = {
     let embed1 = new Discord.MessageEmbed()
     .setColor('#2f3136')
     .setDescription(`${warn} ${message.author}: you need to enter a **valid** role`)
-    return message.channel.send({
+    return message.reply({
       embeds: [embed1] 
   })
     } 
