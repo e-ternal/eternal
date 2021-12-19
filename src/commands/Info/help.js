@@ -13,17 +13,25 @@ module.exports = {
         .setColor("#2f3136")
         .setTitle(`${client.user.username}`)
         .setThumbnail(`${client.user.avatarURL({ dynamic: true })}`)
-        .setDescription(`**updates** \n **11/16** - bot has been revamped. \n \n **[bot invite](https://discord.com/api/oauth2/authorize?client_id=745743723496996864&permissions=8&scope=bot)**\n **[support server](https://discord.gg/wKR3G6qrw5)**`)
-        .addField(`config`, "`prefix` `setbanner` `seticon` `setsplash` `setup`")
-        .addField(`fun`,"`8ball` `coinflip` `firstmessage` `hack` `hug` `image` `joke` `kiss` `meme` `penis` `poll` `slap` `snipe` `spotify`")
-        .addField(`info`,"`botinfo` `donate` `help` `invite` `ping` `uptime`")
-        .addField(`moderation`,"`ban` `botclear` `emojiadd` `hackban` `jail` `kick` `lock` `purge` `purgeuser` `rename` `role` `rolecreate` `roleremove` `unban` `unjail` `unlock` `unmute` ")
-        .addField(`utility`,"`afk` `anime` `avatar` `banner` `embed` `emojiadd` `enlarge` `guildbanner` `guildicon` `imdb` `membercount` `members` `roleinfo` `serverinfo` `status` `twitter` `urban` `userinfo` `weather` ")
+        .setDescription("for more support, join the [support server](https://discord.gg/wKR3G6qrw5)")
+        .addField(`admin`, "`;help admin`")
+        .addField(`fun`, "`;help fun`")
+        .addField(`info`,"`;help info`")
+        .addField(`utility`,"`;help utility`")
         .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
-        message.reply({
+        if(!helpArgs[0]) return message.reply({
             embeds: [help]
         })
 
+        const help2 = new Discord.MessageEmbed()
+        .setColor("#2f3136")
+        .setTitle(`test`)
+        .setThumbnail(`${client.user.avatarURL({ dynamic: true })}`)
+        .setDescription("test")
+        .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
+        if(helpArgs[0] === 'admin') return message.reply({
+            embeds: [help2]
+        })
         // message.reply({ embeds: [help] })
             
     }
