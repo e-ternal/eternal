@@ -55,9 +55,8 @@ module.exports = {
 
         const help5 = new Discord.MessageEmbed()
         .setColor("#2f3136")
-        .setTitle(`test`)
-        .setThumbnail(`${client.user.avatarURL({ dynamic: true })}`)
-        .setDescription("test")
+        .setTitle(`utility commands`)
+        .setDescription("`avatar`, `guildbanner`, `guildicon`, `inrole`, `membercount`")
         .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
         if(helpArgs[0] === 'utility') return message.reply({
             embeds: [help5]

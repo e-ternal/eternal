@@ -18,7 +18,7 @@ module.exports = {
       .setDescription('view members in a role')
       .addField('**usage**', '\`\`\`Syntax: inrole <role>\nExample: members Staff\`\`\`')
       .addField('**aliases**', 'members', true)
-      .setTimestamp()
+      .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
       .setColor(`#2f3136`)
     if (!args[0]) return message.channel.send({ embeds: [inroleEmbed] })
 
