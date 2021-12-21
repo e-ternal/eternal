@@ -1,4 +1,4 @@
-const { Client, Message } = require('discord.js');
+const { Client, Message, MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: "eval",
@@ -12,7 +12,13 @@ module.exports = {
     */
 
     run: async (client, message, args) => {
-        if (message.author.id != "188726511644180481") return message.channel.send("you can't execute this command.");
+        const noperms = new MessageEmbed()
+      .setAuthor(message.author.username, message.author.avatarURL({
+        dynamic: true
+      }))
+      .setDescription('you dont have permission to execute this command')
+      .setColor(`#2f3136`)
+        if (message.author.id != "188726511644180481") return message.channel.send({ embeds: [noperms] })
 
         const clean = text => {
             if (typeof (text) === "string")
