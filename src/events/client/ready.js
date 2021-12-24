@@ -18,8 +18,8 @@ client.on('ready', async () => {
     console.log(`eternal is online`)
 
     const activites = [
-        {name: `;help | ${client.guilds.cache.size} servers`, type: "WATCHING"},
-        {name: `;help | ${client.users.cache.size} users`, type: "LISTENING"},
+        {name: `${client.guilds.cache.size} servers`, type: "WATCHING"},
+        {name: `${client.users.cache.size} users`, type: "WATCHING"},
     ]
     let activity = 0
     client.user.setPresence({status: "online", activity: activites[0]})
