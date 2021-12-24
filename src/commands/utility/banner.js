@@ -32,9 +32,9 @@ module.exports = {
                 
 
                 const embed = new MessageEmbed()
-                .setTitle(`${user.user.tag}'s Banner`)
+                .setTitle(`${user.user.tag}'s banner`)
                 .setImage(image)
-                .setColor("RANDOM")
+                .setColor("#2f3136")
                 message.reply({embeds: [embed]})
             } else {
                 if(accent_color) {

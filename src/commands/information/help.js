@@ -26,7 +26,6 @@ module.exports = {
         const help2 = new Discord.MessageEmbed()
         .setColor("#2f3136")
         .setTitle(`test`)
-        .setThumbnail(`${client.user.avatarURL({ dynamic: true })}`)
         .setDescription("test")
         .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
         if(helpArgs[0] === 'admin') return message.reply({
@@ -45,9 +44,8 @@ module.exports = {
 
         const help4 = new Discord.MessageEmbed()
         .setColor("#2f3136")
-        .setTitle(`test`)
-        .setThumbnail(`${client.user.avatarURL({ dynamic: true })}`)
-        .setDescription("test")
+        .setTitle(`information commands`)
+        .setDescription("`botinfo`, `help`, `invite`, `ping`, `uptime`")
         .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
         if(helpArgs[0] === 'info') return message.reply({
             embeds: [help4]
@@ -56,7 +54,7 @@ module.exports = {
         const help5 = new Discord.MessageEmbed()
         .setColor("#2f3136")
         .setTitle(`utility commands`)
-        .setDescription("`avatar`, `guildbanner`, `guildicon`, `inrole`, `membercount`")
+        .setDescription("`avatar`, `banner`, `guildbanner`, `guildicon`, `inrole`, `membercount`, `serverinfo`, `weather`")
         .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
         if(helpArgs[0] === 'utility') return message.reply({
             embeds: [help5]
