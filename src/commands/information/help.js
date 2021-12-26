@@ -14,9 +14,10 @@ module.exports = {
         .setTitle(`help`)
         .setThumbnail(`${client.user.avatarURL({ dynamic: true })}`)
         .setDescription("for more support, join the [support server](https://discord.gg/wKR3G6qrw5)")
-        .addField(`admin`, "`;help admin`")
+        .addField(`configuration`, "`;help configuration`")
         .addField(`fun`, "`;help fun`")
-        .addField(`info`,"`;help info`")
+        .addField(`information`, "`;help info`")
+        .addField(`moderation`,"`;help moderation`")
         .addField(`utility`,"`;help utility`")
         .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
         if(!helpArgs[0]) return message.reply({
@@ -25,8 +26,8 @@ module.exports = {
 
         const help2 = new Discord.MessageEmbed()
         .setColor("#2f3136")
-        .setTitle(`test`)
-        .setDescription("test")
+        .setTitle(`configuration commands`)
+        .setDescription("`antinuke`, `prefix`")
         .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
         if(helpArgs[0] === 'admin') return message.reply({
             embeds: [help2]
@@ -34,8 +35,7 @@ module.exports = {
 
         const help3 = new Discord.MessageEmbed()
         .setColor("#2f3136")
-        .setTitle(`test`)
-        .setThumbnail(`${client.user.avatarURL({ dynamic: true })}`)
+        .setTitle(`fun commands`)
         .setDescription("test")
         .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
         if(helpArgs[0] === 'fun') return message.reply({
@@ -53,11 +53,20 @@ module.exports = {
 
         const help5 = new Discord.MessageEmbed()
         .setColor("#2f3136")
+        .setTitle(`moderation commands`)
+        .setDescription("`botinfo`, `help`, `invite`, `ping`, `uptime`")
+        .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
+        if(helpArgs[0] === 'moderation') return message.reply({
+            embeds: [help5]
+        })
+
+        const help6 = new Discord.MessageEmbed()
+        .setColor("#2f3136")
         .setTitle(`utility commands`)
         .setDescription("`avatar`, `banner`, `guildbanner`, `guildicon`, `inrole`, `membercount`, `serverinfo`, `weather`")
         .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
         if(helpArgs[0] === 'utility') return message.reply({
-            embeds: [help5]
+            embeds: [help6]
         })
         // message.reply({ embeds: [help] })
         // ${client.user.username} 
