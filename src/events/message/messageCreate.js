@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js")
+const { Collection } = require("mongoose")
 const client = require("../../../index")
 const guildSchema = require("../../schemas/guild")
 const userSchema = require("../../schemas/user")
@@ -85,4 +86,13 @@ client.on('messageCreate', async (message) => {
 
         await command.run(client, message, args, props)
     }
+})
+client.snipes = new Map();
+client.on('messageDelete', async function (message, channel) {
+    client.snipes.set(message.channel.id, {
+        content: message.content,
+        author: message.author.tag,
+        image: message.attachments.first() ?
+        message.attachments.first.proxyURL : null
+    })
 })

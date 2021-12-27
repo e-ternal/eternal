@@ -40,7 +40,7 @@ module.exports = {
 
     const embed = new Discord.MessageEmbed()
     .setColor('#2f3136')
-    .setDescription(`🕰️ **eternal** has been up for: ${UptimeDays}${UptimeHours}${UptimeMinutes}${UptimeSeconds}`)
+    .setDescription(`**eternal** has been up for: ${UptimeDays}${UptimeHours}${UptimeMinutes}${UptimeSeconds}`)
 
     message.reply({
         embeds: [embed]

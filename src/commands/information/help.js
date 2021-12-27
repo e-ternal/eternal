@@ -29,7 +29,7 @@ module.exports = {
         .setTitle(`configuration commands`)
         .setDescription("`antinuke`, `prefix`")
         .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
-        if(helpArgs[0] === 'admin') return message.reply({
+        if(helpArgs[0] === 'configuration') return message.reply({
             embeds: [help2]
         })
 
