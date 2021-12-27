@@ -9,13 +9,11 @@ module.exports = {
     
     
     const embed = new Discord.MessageEmbed()
-    .setAuthor(message.author.username, message.author.avatarURL({
-      dynamic: true
-    }))
     .setTitle('weather')
     .setDescription('gets simple weather information')
     .addField('**usage**', '\`\`\`Syntax: weather <location>\nExample: weather Washington D.C\`\`\`')
     .setTimestamp()
+    .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
     .setColor(`#2f3136`)
   if (!args[0]) return message.channel.send({ embeds: [embed] })
     

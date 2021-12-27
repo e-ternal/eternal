@@ -36,7 +36,7 @@ module.exports = {
         const help3 = new Discord.MessageEmbed()
         .setColor("#2f3136")
         .setTitle(`fun commands`)
-        .setDescription("test")
+        .setDescription("`snipe`")
         .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
         if(helpArgs[0] === 'fun') return message.reply({
             embeds: [help3]
@@ -54,7 +54,7 @@ module.exports = {
         const help5 = new Discord.MessageEmbed()
         .setColor("#2f3136")
         .setTitle(`moderation commands`)
-        .setDescription("`botinfo`, `help`, `invite`, `ping`, `uptime`")
+        .setDescription("`ban`, `kick`, `lock`, `purge`, `unban` `unlock`")
         .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
         if(helpArgs[0] === 'moderation') return message.reply({
             embeds: [help5]

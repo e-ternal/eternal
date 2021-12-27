@@ -9,7 +9,12 @@ module.exports = {
         
         const user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member
 
-        if(!user) return message.reply("An unknown error has occured.")
+        if(!user) {
+            let errorEmbed = new MessageEmbed()
+            .setColor('#2F3136')
+            .setDescription(`<:eternalWarn:873633376114995280> ${message.author}: unexpected error`)
+            return message.reply({ embeds: [errorEmbed] })
+        }
 
         axios.get(`https://discord.com/api/users/${user.id}`, {
             

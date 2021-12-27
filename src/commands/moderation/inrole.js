@@ -1,9 +1,10 @@
 const Discord = require('discord.js');
-const { warn } = require('../../../emojis.json')
 
 module.exports = {
   name: "inrole",
   aliases: ["members"],
+  userPermissions: ['MANAGE_ROLES'],
+  botPermissions: ['MANAGE_ROLES'],
 
   run: async (client, message, args) => {
     if (args.includes("@everyone")) return;
@@ -11,12 +12,9 @@ module.exports = {
     if (args.includes("@here")) return;
 
     const inroleEmbed = new Discord.MessageEmbed()
-      .setAuthor(message.author.username, message.author.avatarURL({
-        dynamic: true
-      }))
       .setTitle('inrole')
-      .setDescription('view members in a role')
-      .addField('**usage**', '\`\`\`Syntax: inrole <role>\nExample: members Staff\`\`\`')
+      .setDescription('views members inside a role')
+      .addField('**usage**', '\`\`\`Syntax: inrole <role>\`\`\`')
       .addField('**aliases**', 'members', true)
       .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
       .setColor(`#2f3136`)
@@ -26,7 +24,7 @@ module.exports = {
     if (!role) {
     let embed1 = new Discord.MessageEmbed()
     .setColor('#2f3136')
-    .setDescription(`${warn} ${message.author}: you need to enter a **valid** role`)
+    .setDescription(`<:eternalWarn:873633376114995280> ${message.author}: you need to enter a **valid** role`)
     return message.reply({
       embeds: [embed1] 
   })
@@ -40,7 +38,7 @@ module.exports = {
     if (membersWithRole > 2048) return message.channel.send('list is too long')
 
     let roleListEmbed = new Discord.MessageEmbed()
-      .setColor(role.hexColor)
+      .setColor('#2f3136')
       .setAuthor(`${message.author.username}`, message.author.displayAvatarURL({
         dynamic: true,
         size: 2048
