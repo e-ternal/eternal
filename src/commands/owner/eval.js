@@ -13,9 +13,6 @@ module.exports = {
     */
 
     run: async (client, message, args) => {
-        const noperms = new MessageEmbed()
-      .setDescription('you dont have permission to execute this command')
-      .setColor(`#2f3136`)
 
         const clean = text => {
             if (typeof (text) === "string")

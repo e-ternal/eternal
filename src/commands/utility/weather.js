@@ -35,7 +35,7 @@ message.channel.send({ embeds: [weather] })
 
 } catch(err) {
     const errorembed = new Discord.MessageEmbed()
-      .setDescription('<:eternalWarn:873633376114995280> unable to get the data of given location')
+      .setDescription(`<:eternalError:921857438502756434>  ${message.author}: unable to get the data of given location`)
       .setColor(`#2f3136`)
   return message.channel.send({ embeds: [errorembed] })
 }

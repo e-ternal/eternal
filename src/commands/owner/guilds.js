@@ -5,13 +5,9 @@ module.exports = {
   aliases: ["serverlist", "slt"],
   owner: true,
   category: "owner",
+  botPermissions: ['EMBED_LINKS'],
 
   run: async (client, message, args) => {
-      if (!message.member.permissions.has("EMBED_LINKS"))
-        return message.channel
-          .send("i don't have permissions to send embeds lol")
-          .then(msg => msg.delete({ timeout: 5000 }));
-
       let i0 = 0;
       let i1 = 10;
       let page = 1;

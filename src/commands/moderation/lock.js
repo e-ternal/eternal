@@ -38,7 +38,7 @@ module.exports = {
     channel.permissionOverwrites.edit(message.guild.id, { SEND_MESSAGES: false });
 
     const embed = new Discord.MessageEmbed()
-      .setDescription(`:lock: ${message.author}: ${channel} locked. Use \`,unlock\` to remove this lockdown`)
+      .setDescription(`:lock: ${message.author}: ${channel} locked. Use \`;unlock\` to remove this lockdown`)
       .setColor('#2f3136');
 
     message.channel.send({ embeds: [embed] });

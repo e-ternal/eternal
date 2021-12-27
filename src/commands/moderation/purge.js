@@ -10,7 +10,7 @@ module.exports = {
    
     const purgehelpEmbed = new Discord.MessageEmbed()
       .setTitle('purge')
-      .setDescription('eeletes the specified amount of messages from the current channel')
+      .setDescription('deletes the specified amount of messages from the current channel')
       .addField('**usage**', '\`\`\`syntax: purge <amount>\n\`\`\`')
       .addField('**permissions**', `MANAGE_MESSAGES`, true)
       .addField('**aliases**', 'clear, prune, c', true)
