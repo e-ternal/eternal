@@ -20,6 +20,7 @@ module.exports = {
     .addField('**usage**', '\`\`\`syntax: role (member) <role name>\n\`\`\`')
     .addField('**permissions**', `MANAGE_ROLES`, true)
     .setTimestamp()
+    .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
     .setColor("#2f3136")
   if (!args[0]) return message.channel.send({ embeds: [rolehelpEmbed] })
   
