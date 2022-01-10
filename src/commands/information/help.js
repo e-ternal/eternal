@@ -63,7 +63,7 @@ module.exports = {
         const help6 = new Discord.MessageEmbed()
         .setColor("#2f3136")
         .setTitle(`utility commands`)
-        .setDescription("`avatar`, `banner`, `enlarge`, `guildbanner`, `guildicon`, `inrole`, `membercount`, `twitter` `sendembed`, `serverinfo`, `weather`")
+        .setDescription("`avatar`, `banner`, `enlarge`, `guildbanner`, `guildicon`, `inrole`, `membercount`, `twitter`, `sendembed`, `serverinfo`, `userinfo`, `weather`")
         .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
         if(helpArgs[0] === 'utility') return message.reply({
             embeds: [help6]
