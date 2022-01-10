@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
   name: "guilds",
-  aliases: ["serverlist", "slt"],
+  aliases: ["serverlist", "slt", "servers"],
   owner: true,
   category: "owner",
   botPermissions: ['EMBED_LINKS'],
