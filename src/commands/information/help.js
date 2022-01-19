@@ -27,7 +27,7 @@ module.exports = {
         const help2 = new Discord.MessageEmbed()
         .setColor("#2f3136")
         .setTitle(`configuration commands`)
-        .setDescription("`antinuke`, `prefix`")
+        .setDescription("`antinuke`, `prefix`, `setbanner`, `seticon`, `setsplash`")
         .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
         if(helpArgs[0] === 'configuration') return message.reply({
             embeds: [help2]
