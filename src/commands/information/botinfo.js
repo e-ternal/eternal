@@ -1,4 +1,4 @@
-/* const Discord = require('discord.js');
+const Discord = require('discord.js');
 
 module.exports = {
   name: "botinfo",
@@ -51,7 +51,7 @@ module.exports = {
     const uniqueOnlineIDs = new Set();
     for (const guild of client.guilds.cache.values()) {
       for (const member of guild.members.cache.values()) {
-        if (member.presence.status !== "offline") uniqueOnlineIDs.add(member.id);
+        if (member.presence?.status !== "offline") uniqueOnlineIDs.add(member.id);
       }
     }
 
@@ -60,14 +60,14 @@ module.exports = {
     const embed = new Discord.MessageEmbed()
       .setColor('#2f3136')
       .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
-      .setDescription(`Bot statistics, developed by <@188726511644180481> and <@852603783455309918> \n**Memory:** ${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)}MB, **Commands:** ${client.commands.size}`)
-      .addField('**Members**', `${client.guilds.cache.reduce((current, guild) => current + guild.memberCount, 0).toLocaleString()} total\n${uniqueIDs.size.toLocaleString()} unique\n${uniqueOnlineIDs.size.toLocaleString()} unique online`, true)
-      .addField('**Channels**', `${client.channels.cache.size.toLocaleString()} total\n${client.channels.cache.filter(channel => channel.type == 'text').size.toLocaleString()} text\n${client.channels.cache.filter(channel => channel.type == 'voice').size.toLocaleString()} voice`, true)
-      .addField('**Guilds**', `${client.guilds.cache.size.toLocaleString()} (public)`, true)
-      .setFooter(`Uptime: ${UptimeDays}${UptimeHours}${UptimeMinutes}${UptimeSeconds}`)
+      .setDescription(`bot statistics, developed by <@188726511644180481> and <@852603783455309918> \n**memory:** ${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)}MB, **commands:** ${client.commands.size}`)
+      .addField('**members**', `${client.guilds.cache.reduce((current, guild) => current + guild.memberCount, 0).toLocaleString()} total\n${uniqueIDs.size.toLocaleString()} unique\n${uniqueOnlineIDs.size.toLocaleString()} unique online`, true)
+      .addField('**channels**', `${client.channels.cache.size.toLocaleString()} total\n${client.channels.cache.filter(channel => channel.type == 'text').size.toLocaleString()} text\n${client.channels.cache.filter(channel => channel.type == 'voice').size.toLocaleString()} voice`, true)
+      .addField('**guilds**', `${client.guilds.cache.size.toLocaleString()} (public)`, true)
+      .setFooter(`uptime: ${UptimeDays}${UptimeHours}${UptimeMinutes}${UptimeSeconds}`)
       .setTimestamp()
       message.channel.send({
         embeds: [embed]
     })
   }
-} */
+}

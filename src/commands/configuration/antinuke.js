@@ -26,6 +26,17 @@ module.exports = {
                 })
             }
 
+            if (args[0] === 'help') {
+                const embed = new MessageEmbed()
+                .setTitle('antinuke')
+                .setDescription('a fully configurable monitoring system with the objective to observe and note any changes (spontaneous or planned) that take place in your server.')
+                .addField('**subcommands**', ';antinuke configuration - views current permissions of the bots antinuke.')
+                .addField('**permissions**', `ADMINISTRATOR`, true)
+                .setColor("#2f3136")
+                .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
+                return message.channel.send({ embeds: [embed] })
+            }
+
             if (args[0] === 'configuration') {
                 const isAntinukePermissionsOn = guildSchem.antinuke_permissions 
                 if (isAntinukePermissionsOn === true) {

@@ -55,7 +55,7 @@ module.exports = {
 
     const activities = [];
     let customStatus;
-    for (const activity of user.presence.activities.values()) {
+    for (const activity of user.presence?.activities.values()) {
       switch (activity.type) {
         case 'LISTENING':
           if (user.bot) activities.push(`listening to **${activity.name}**`);
