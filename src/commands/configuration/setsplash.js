@@ -45,6 +45,6 @@ module.exports = {
         .setDescription(`<:eternalSuccess:921857405447454761> ${message.author}: successfully set the guild splash to [**this image**](${splash})` )
         return message.reply({ embeds: [approved2] })
       })
-    }
+    } 
   }
 }

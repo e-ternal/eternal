@@ -40,6 +40,13 @@ module.exports = {
         .setDescription(`<:eternalSuccess:921857405447454761> ${message.author}: successfully set the guild icon to [**this image**](${icon})` )
         return message.reply({ embeds: [approved2] })
       })
-    }
+      try {
+    } catch (e) {
+      console.log(e)
+      const errorEmbed = new MessageEmbed()
+      .setColor('#2F3136')
+      .setDescription(`<:eternalError:921857438502756434> ${message.author}: there was an **error** when executing **${module.exports.name}**`)
+      return message.reply({ embeds: [errorEmbed] })
   }
-}
+  } 
+} }
