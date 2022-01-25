@@ -10,6 +10,7 @@ module.exports = {
      const mentionedMember = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
     const role = message.mentions.roles.first() || message.guild.roles.cache.get(args[1]) || message.guild.roles.cache.find(r => r.name === args.slice(1).join(' '));
 
+  if (!args[0]) {
     const rolehelpEmbed = new Discord.MessageEmbed()
     .setAuthor(message.author.username, message.author.avatarURL({
       dynamic: true
@@ -22,7 +23,8 @@ module.exports = {
     .setTimestamp()
     .setFooter(`${client.user.username}`, client.user.displayAvatarURL())
     .setColor("#2f3136")
-  if (!args[0]) return message.channel.send({ embeds: [rolehelpEmbed] })
+  return message.channel.send({ embeds: [rolehelpEmbed] })
+  }
   
   if (args[0] === 'add') {
     if (!mentionedMember) {
@@ -35,7 +37,7 @@ module.exports = {
         .setColor('#2F3136')
         .setDescription(`<:eternalError:921857438502756434>  ${message.author}:  you cannot give a role that is **higher** than **yours**`)
         return message.reply({ embeds: [error2] })
-    } if (!args[1]) {
+    } if (!args[0]) {
         let error3 = new Discord.MessageEmbed()
         .setColor('#2F3136')
         .setDescription(`<:eternalWarn:873633376114995280> ${message.author}:  you must **state** a valid role`)
