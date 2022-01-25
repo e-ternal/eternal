@@ -13,7 +13,7 @@ module.exports = {
 
     const embed = new Discord.MessageEmbed()
     .setTitle('image')
-    .setDescription('Search google for an image')
+    .setDescription('search google for an image')
     .addField('**usage**', '\`\`\`syntax: image <search>\`\`\`')
     .addField('**aliases**', 'im, img', true)
     .setTimestamp()
@@ -80,7 +80,7 @@ module.exports = {
               .setAuthor(message.author.username, message.author.avatarURL({
                 dynamic: true
               }))
-              .setTitle(`**Search Results for ${search}**`)
+              .setTitle(`**esults for ${search}**`)
               .setImage(results[page].url)
               .setFooter(`${page + 1}/${results.length} of Google Image Search Results (Random)`, googleIcon);
             message.channel.send({ embeds: [embed] }).then(msg => {
@@ -93,7 +93,7 @@ module.exports = {
               .setAuthor(message.author.username, message.author.avatarURL({
                 dynamic: true
               }))
-              .setTitle(`**Search Results for ${search}**`)
+              .setTitle(`**search results for ${search}**`)
               .setImage(results[page].url)
               .setFooter(`${page + 1}/${results.length} of Google Image Search Results (Random)`, googleIcon);
             msg.edit({ embeds: [embed] })
