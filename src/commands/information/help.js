@@ -13,7 +13,7 @@ module.exports = {
         .setColor("#2f3136")
         .setTitle(`help`)
         .setThumbnail(`${client.user.avatarURL({ dynamic: true })}`)
-        .setDescription("for more support, join the [support server](https://discord.gg/zB33rYQRrc)")
+        .setDescription("for more support, join the [support server](https://discord.gg/8v8kT8hYfc)")
         .addField(`configuration`, "`;help configuration`")
         .addField(`fun`, "`;help fun`")
         .addField(`information`, "`;help info`")
